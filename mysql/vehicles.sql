@@ -1,6 +1,6 @@
 CREATE TABLE vehicles (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    category_id BIGINT NOT NULL,
+    category_id INT NOT NULL,
     name VARCHAR(255) NOT NULL,
     slug VARCHAR(255) UNIQUE NOT NULL,
     license_plate VARCHAR(20) UNIQUE NOT NULL,

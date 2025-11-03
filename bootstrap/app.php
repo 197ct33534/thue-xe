@@ -13,18 +13,10 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withMiddleware(function (Middleware $middleware): void {
           // Alias middleware
         $middleware->alias([
-            'role' => \App\Http\Middleware\CheckRole::class,
+            'role' => \App\Http\Middleware\RoleMiddleware::class,
         ]);
 
-        // Thêm vào nhóm web
-        $middleware->web(append: [
-            \App\Http\Middleware\CheckRole::class,
-        ]);
-
-        // Thêm vào nhóm api nếu cần
-        $middleware->api(append: [
-            \App\Http\Middleware\CheckRole::class,
-        ]);
+       
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //
