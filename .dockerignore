@@ -1,0 +1,10 @@
+.git
+.gitignore
+.env
+node_modules
+vendor
+storage/*.key
+bootstrap/cache/*
+.phpunit.result.cache
+docker-compose.yml
+Dockerfile
